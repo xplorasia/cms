@@ -16,6 +16,8 @@ global.jQuery = require('jquery')
 var $ = global.jQuery
 window.$ = $
 
+import 'bootstrap/dist/js/bootstrap.min.js'
+
 Vue.use(Electron)
 Vue.use(Resource)
 Vue.use(Router)

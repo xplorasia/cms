@@ -12,20 +12,13 @@
             </a>
           </li>
           <li>
-            <router-link to='/'>HOME</router-link>
-          </li>
-          <li>
-            <router-link to='/country'>Country</router-link>
+            <router-link to='/'><i class="fa fa-home fa-2x"></i> HOME</router-link>
           </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
+            <router-link to='/country' class="dropdown-toggle" data-toggle="dropdown">Country <span class="caret"></span></router-link>
             <ul class="dropdown-menu" role="menu">
-              <li class="dropdown-header">Dropdown heading</li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
+              <li class="dropdown-header">Country Datasets</li>
+              <li><router-link to='/country/form'>Create</router-link></li>
             </ul>
           </li>
         </ul>
