@@ -52,11 +52,12 @@
     },
     mounted () {
       this.getList()
+      console.log()
     },
     methods: {
       getList: function () {
         this.loading = true
-        this.$http.get('http://xa.dev/api/countries').then(response => {
+        this.$http.get(process.env.API_URL + '/countries').then(response => {
           this.items = response.body.data
           this.loading = false
         }, response => {
@@ -68,7 +69,7 @@
       },
       deleteThis: function (item) {
         this.loading = true
-        this.$http.delete('http://xa.dev/api/countries/' + item._id).then(response => {
+        this.$http.delete(process.env.API_URL + '/api/countries/' + item._id).then(response => {
           this.getList()
         }, response => {
           // error callback

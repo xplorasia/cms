@@ -12,6 +12,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'font-awesome/css/font-awesome.min.css'
 import './components/xa.css'
 
+require('dotenv').config()
+
 global.jQuery = require('jquery')
 var $ = global.jQuery
 window.$ = $

@@ -54,7 +54,7 @@
       this.getForm()
       if (this.$route.query.id) {
         let id = this.$route.query.id
-        this.$http.get('http://xa.dev/api/countries/' + id).then(response => {
+        this.$http.get(process.env.API_URL + '/countries/' + id).then(response => {
           this.model = response.body
         }, response => {
           // error callback
@@ -64,7 +64,7 @@
     methods: {
       getForm: function () {
         this.loading = true
-        this.$http.get('http://xa.dev/api/forms/countries').then(response => {
+        this.$http.get(process.env.API_URL + '/forms/countries').then(response => {
           this.model = response.body.model
           this.schema = response.body.schema
           this.loading = false
@@ -75,13 +75,13 @@
       saveForm: function () {
         this.loading = true
         if (this.mode === 'update') {
-          this.$http.put('http://xa.dev/api/countries/' + this.id, this.model).then(response => {
+          this.$http.put(process.env.API_URL + '/countries/' + this.id, this.model).then(response => {
             this.$router.push('/country')
           }, response => {
             // error callback
           })
         } else {
-          this.$http.post('http://xa.dev/api/countries', this.model).then(response => {
+          this.$http.post(process.env.API_URL + '/countries', this.model).then(response => {
             if (response.status === 201) {
               this.$router.push('/country')
             }
