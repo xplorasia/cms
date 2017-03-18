@@ -1,6 +1,4 @@
-global.jQuery = require('jquery')
-var $ = global.jQuery
-window.$ = $
+window.jQuery = window.$ = require('jquery')
 
 $(document).ready(function () {
   var trigger = $('.hamburger')
@@ -27,5 +25,9 @@ $(document).ready(function () {
 
   $('[data-toggle="offcanvas"]').click(function () {
     $('#wrapper').toggleClass('toggled')
+  })
+
+  $('#sidebar-wrapper a.router-link-active').click(function () {
+    $('[data-toggle="offcanvas"]').click()
   })
 })

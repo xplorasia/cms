@@ -8,17 +8,14 @@ import routes from './routes'
 
 import VueFormGenerator from 'vue-form-generator'
 
+require('dotenv').config()
+import './components/menu.js'
+require('bootstrap')
+
+/* CSS */
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'font-awesome/css/font-awesome.min.css'
 import './components/xa.css'
-
-require('dotenv').config()
-
-global.jQuery = require('jquery')
-var $ = global.jQuery
-window.$ = $
-
-import 'bootstrap/dist/js/bootstrap.min.js'
 
 Vue.use(Electron)
 Vue.use(Resource)

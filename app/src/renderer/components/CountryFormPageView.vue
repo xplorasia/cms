@@ -31,20 +31,12 @@
     name: 'country-page',
     data: function () {
       return {
-
-        model: {
-
-        },
-
-        schema: {
-
-        },
-
+        model: {},
+        schema: {},
         formOptions: {
           validateAfterLoad: true,
           validateAfterChanged: true
         },
-
         mode: this.$route.query.id ? 'update' : 'create',
         id: this.$route.query.id,
         loading: false

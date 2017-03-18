@@ -40,8 +40,6 @@
 </template>
 
 <script>
-  import './menu.js'
-
   export default {
     name: 'country-page',
     data: function () {
@@ -52,7 +50,6 @@
     },
     mounted () {
       this.getList()
-      console.log()
     },
     methods: {
       getList: function () {

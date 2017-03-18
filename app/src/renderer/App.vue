@@ -15,9 +15,10 @@
             <router-link to='/'><i class="fa fa-home fa-2x"></i> HOME</router-link>
           </li>
           <li class="dropdown">
-            <router-link to='/country' class="dropdown-toggle" data-toggle="dropdown">Country <span class="caret"></span></router-link>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Country <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-header">Country Datasets</li>
+              <li> <router-link to='/country'>List</li>
               <li><router-link to='/country/form'>Create</router-link></li>
             </ul>
           </li>
