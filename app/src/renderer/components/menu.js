@@ -28,6 +28,6 @@ $(document).ready(function () {
   })
 
   $('#sidebar-wrapper .close-menu').on('click', function () {
-    $('#wrapper').toggleClass('toggled')
+    $('[data-toggle="offcanvas"]').click()
   })
 })
