@@ -27,7 +27,7 @@ $(document).ready(function () {
     $('#wrapper').toggleClass('toggled')
   })
 
-  $('#sidebar-wrapper a.router-link-active').on('click', function () {
-    $('[data-toggle="offcanvas"]').click()
+  $('#sidebar-wrapper .close-menu').on('click', function () {
+    $('#wrapper').toggleClass('toggled')
   })
 })

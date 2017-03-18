@@ -18,16 +18,16 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Country <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-header">Country Datasets</li>
-              <li> <router-link to='/country'>List</li>
-              <li><router-link to='/country/form'>Create</router-link></li>
+              <li><router-link to='/country' class="close-menu">List</router-link></li>
+              <li><router-link to='/country/form' class="close-menu">Create</router-link></li>
             </ul>
           </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Currency <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-header">Currency Datasets</li>
-              <li> <router-link to='/currency'>List</li>
-              <li><router-link to='/currency/form'>Create</router-link></li>
+              <li><router-link to='/currency' class="close-menu">List</router-link></li>
+              <li><router-link to='/currency/form' class="close-menu">Create</router-link></li>
             </ul>
           </li>
         </ul>
