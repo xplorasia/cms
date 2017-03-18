@@ -23,11 +23,11 @@ $(document).ready(function () {
     }
   }
 
-  $('[data-toggle="offcanvas"]').click(function () {
+  $('[data-toggle="offcanvas"]').on('click', function () {
     $('#wrapper').toggleClass('toggled')
   })
 
-  $('#sidebar-wrapper a.router-link-active').click(function () {
+  $('#sidebar-wrapper a.router-link-active').on('click', function () {
     $('[data-toggle="offcanvas"]').click()
   })
 })
