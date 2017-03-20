@@ -87,6 +87,10 @@ let rendererConfig = {
         ? path.resolve(__dirname, 'app/node_modules')
         : false,
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
     new webpack.NoEmitOnErrorsPlugin()
   ],
   output: {

@@ -1,5 +1,3 @@
-window.jQuery = window.$ = require('jquery')
-
 $(document).ready(function () {
   var trigger = $('.hamburger')
   var overlay = $('.overlay')
