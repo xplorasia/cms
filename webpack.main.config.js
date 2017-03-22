@@ -7,6 +7,8 @@ const pkg = require('./app/package.json')
 const settings = require('./config.js')
 const webpack = require('webpack')
 
+const Dotenv = require('dotenv-webpack')
+
 let mainConfig = {
   entry: {
     main: path.join(__dirname, 'app/src/main/index.js')
@@ -51,6 +53,11 @@ let mainConfig = {
       compress: {
         warnings: false
       }
+    }),
+    new Dotenv({
+        path: './.env',
+        safe: false,
+        systemvars: true
     })
   ],
   resolve: {

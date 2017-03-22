@@ -8,7 +8,6 @@ import routes from './routes'
 
 import VueFormGenerator from 'vue-form-generator'
 
-require('dotenv').config()
 import './components/menu.js'
 require('bootstrap')
 

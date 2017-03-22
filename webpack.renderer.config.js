@@ -9,6 +9,7 @@ const webpack = require('webpack')
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 
 let rendererConfig = {
   devtool: '#eval-source-map',
@@ -91,7 +92,12 @@ let rendererConfig = {
       $: 'jquery',
       jQuery: 'jquery'
     }),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    new Dotenv({
+      path: './.env',
+      safe: false,
+      systemvars: true
+    })
   ],
   output: {
     filename: '[name].js',
